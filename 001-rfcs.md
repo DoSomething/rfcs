@@ -3,7 +3,7 @@
 
 We want to start using RFCs to discuss (and document) architectural decisions.
 
-**Discussion:** Link the PR introducing this RFC here!
+**Discussion:** https://github.com/DoSomething/rfcs/pull/1
 
 ## Problem
 
