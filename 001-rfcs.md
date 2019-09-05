@@ -7,7 +7,7 @@ We want to start using RFCs to discuss (and document) architectural decisions.
 
 ## Problem
 
-Ideas tend to get stuck in one person's head by default (or lost in 1:1 conversations). As our team grows, we want to make it easy for everyone to take part in architectural discussions & see where we're thinking about taking our platform.
+Ideas tend to get stuck in one person's head by default (or lost in 1:1 conversations). As our team grows, we want to make it easy for everyone to take part in architectural/process discussions & see ideas we've committed to trying.
 
 ## Proposal
 
