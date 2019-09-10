@@ -8,6 +8,7 @@ We should use GraphQL for all data-fetching in the future.
 
 There were a couple of problems we looked to GraphQL to help solve:
 
+ - When we split our old monolith into multiple applications, we introduced conceptual overhead around service boundaries: What resources live in which application? How do things in separate apps relate to each other?
  - We reimplemented cross-application includes (such as `?include=user` on a list of posts in Rogue) in multiple apps. This caused different backend services to have to act as a "gateway" depending on where a request started.
  - We found that we would eventually implement the same batching & caching logic in each application (for example, fetching campaigns [in Rogue](https://git.io/fjjGZ) or users [in our now-defunct competitions app](https://github.com/DoSomething/gladiator/blob/534ca9834a5369ededaed56deff33404bbc94e99/app/Repositories/DatabaseUserRepository.php#L62-L163)). In each case, we'd have to reconsider the right order-of-operations and maximum batch size for good performance.
  - Because each application maintained it's own caches, it was hard to maintain a consistent cache policy. (For example, one application might cache users for an hour while another didn't cache them at all).
