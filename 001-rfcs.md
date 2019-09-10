@@ -13,7 +13,7 @@ Ideas tend to get stuck in one person's head by default (or lost in 1:1 conversa
 
 We should adopt a simple RFC process, inspired by the process used by the engineering teams at [Artsy](https://artsy.github.io/blog/2019/04/11/on-an-rfcs-process/) and [GOV.UK](https://github.com/alphagov/govuk-rfcs) and on larger open-source projects like [React](https://github.com/reactjs/rfcs) or [Rust](https://github.com/rust-lang/rfcs). (And while their namesake comes from the [exhaustive IETF standards documents](https://www.rfc-editor.org/rfc-index.html), we definitely don't want to replicate that!)
 
-By documenting architectural goals in a semi-formal manner like this, we hope to increase transparency (since a public document is by definition a lot more transparent than one-one-one discussions). We're also hoping this reduces friction by helping to spread ideas _before_ the pull request review process.
+By documenting architectural goals in a semi-formal manner like this, we hope to increase transparency (since a public document is by definition a lot more transparent than 1:1 discussions). We're also hoping this reduces friction by helping to spread ideas _before_ the pull request review process.
 
 I'd recommend we start with a [very lightweight process](https://github.com/DoSomething/rfcs/tree/hello-rfcs#process) and introduce more rules over time.
 
