@@ -25,7 +25,7 @@ We should continue to roll out GraphQL and reduce our reliance on custom data-fe
 
 ## Drawbacks/Alternatives
 
-Using GraphQL relies on more tooling than traditional REST HTTP requests (since you'd likely want a purpose-build GraphQL client). It also means we're investing in a particular technical stack that may not always be as popular [as it currently is](https://www.apollographql.com/docs/intro/benefits/#ready-for-production) (whereas REST isn't going anywhere).
+Using GraphQL relies on more tooling than traditional REST HTTP requests (since you'd likely want a purpose-built GraphQL client). It also means we're investing in a particular technical stack that may not always be as popular [as it currently is](https://www.apollographql.com/docs/intro/benefits/#ready-for-production) (whereas REST isn't going anywhere).
 
 We also considered [JSON:API](https://jsonapi.org/), which is popular in the Ember.js world & solves similar issues.
 
