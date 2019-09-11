@@ -2,7 +2,7 @@
 
 We write automated tests to help us catch mistakes before they impact our users. Automated tests also allow us to test more thoroughly and quickly than if we were testing "by hand", which lets us iterate faster & more confidently!
 
-**Discussion:** …
+**Discussion:** https://github.com/DoSomething/rfcs/pull/4
 
 ## Problem
 
