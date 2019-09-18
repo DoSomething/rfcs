@@ -12,15 +12,15 @@ While our pattern library, [Forge](https://github.com/DoSomething/forge), worked
 
 As our team of full-stack developers shifts to doing more work on our projects that includes both back-end and front-end changes, we need a styling framework in place that is flexible, customizable and empowers our developers to confidently use without the need to code custom style declarations themselves.
 
-Additionally, the patterns in Forge became very specific to how the DoSomething.org website looked in prior iterations. As the design evolved, it has forced us to override many of Forge's rules to be able to replicate changing design needs.
+Additionally, the patterns in Forge are much more specific to how the DoSomething.org website looked in prior iterations. As the design evolved, it has forced us to override many of Forge's rules to be able to replicate changing design needs.
 
 ## Proposal
 
-By utilizing the Tailwind CSS Framework the tech team can work more confidently when building the front-end different interfaces.
+By utilizing the Tailwind CSS Framework the tech team can work more confidently when building the front-end for different interfaces.
 
 A utility class framework like Tailwind CSS offers the following benefits:
 
-- We can easily style items and pages by applying a pre-configured library of classes directly to the HTML.
+- We can easily style items and pages by applying a pre-configured library of classes directly to HTML.
 - We can style custom components without needing to write custom CSS, and without needing to invent specific and unique class names for each component.
 - Once we establish our collection of utility classes, a project's CSS stops growing, since there is less need for custom CSS.
 - Helps keeps CSS scoped to a component, resulting in less worries that a style change could affect styles globally.
@@ -29,4 +29,10 @@ A utility class framework like Tailwind CSS offers the following benefits:
 - Support for responsive design and pseudo-classes within the series of generated utility classes.
 - If needed, we can extract components when it makes sense.
 
-`@TODO: Add bit about Forge 2.0.`
+## Forge 7.0
+
+We think that for the next version of Forge, it could embrace the utility class approach and still be the go-to package for styling front-end interfaces on DoSomething applications.
+
+For version 7.0 we propose eliminating all the current patterns in Forge (as our projects switch to using Tailwind, they will stop using these patterns as is and thus no longer needed). Instead Forge would house the main TailwindCSS configuration and provide the generated styles from this custom configuration. Projects that use Forge 7.0 package can include these generated TailwindCSS styles and have access to all the utility classes they otherwise need.
+
+Additionally, we also propose that Forge could house generic and very common React components that we conclude are useful to use across our DoSomething properties so that there is less duplicated components on different apps.
