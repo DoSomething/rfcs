@@ -8,11 +8,13 @@ We should implement the use of [Tailwind CSS Framework](https://tailwindcss.com/
 
 It has become more difficult over time for our tech team to confidently update the styling and design patterns of our front-end user interfaces.
 
-While our pattern library, [Forge](https://github.com/DoSomething/forge), worked great for building interfaces with the established patterns it provided, it has not been updated in some time and with our rapidly changing design needs and team structure, it no longer seems like the ideal solution to continue evolving.
+While our pattern library, [Forge](https://github.com/DoSomething/forge), worked great for building interfaces with the established patterns it provided, the workflow required (NPM link to test changes locally, publishing releases, updating apps to use new release) did not make updates and rapid iteration to designs patterns feasible, causing Forge to be slow with regular updates and improvement.
 
-As our team of full-stack developers shifts to doing more work on our projects that includes both back-end and front-end changes, we need a styling framework in place that is flexible, customizable and empowers our developers to confidently use without the need to code custom style declarations themselves.
+We do appreciate having a library approach to our front-end to help with establishing a system and a shared baseline of patterns, but in practice a CSS library that has simpler updates or just requires less updates while still supporting changing design needs would be an improvement.
 
-Additionally, the patterns in Forge are much more specific to how the DoSomething.org website looked in prior iterations. As the design evolved, it has forced us to override many of Forge's rules to be able to replicate changing design needs.
+We do appreciate having a library approach to our front-end to help with establishing a system and a shared baseline of patterns, but in practice a CSS library that has simpler updates or just requires less updates while still supporting changing design needs would be an improvement.
+
+As our team structure and focus has changed from dedicated back-end and front-end developers to full-stack developers, we have less team members with extensive, in-depth CSS knowledge, experience or interest in writing cross-browser, responsive style rules. However, our full-stack team still needs to tackle development of features that include full styling of interfaces and showcases the need for a styling framework that is flexible, customizable and empowers our developers to confidently apply styles without the need to code custom style declarations themselves.
 
 ## Proposal
 
