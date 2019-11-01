@@ -12,8 +12,6 @@ While our pattern library, [Forge](https://github.com/DoSomething/forge), worked
 
 We do appreciate having a library approach to our front-end to help with establishing a system and a shared baseline of patterns, but in practice a CSS library that has simpler updates or just requires less updates while still supporting changing design needs would be an improvement.
 
-We do appreciate having a library approach to our front-end to help with establishing a system and a shared baseline of patterns, but in practice a CSS library that has simpler updates or just requires less updates while still supporting changing design needs would be an improvement.
-
 As our team structure and focus has changed from dedicated back-end and front-end developers to full-stack developers, we have less team members with extensive, in-depth CSS knowledge, experience or interest in writing cross-browser, responsive style rules. However, our full-stack team still needs to tackle development of features that include full styling of interfaces and showcases the need for a styling framework that is flexible, customizable and empowers our developers to confidently apply styles without the need to code custom style declarations themselves.
 
 ## Proposal
