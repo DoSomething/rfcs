@@ -35,6 +35,10 @@ A utility class framework like Tailwind CSS offers the following benefits:
 - Support for [responsiveness](https://tailwindcss.com/docs/responsive-design) and [pseudo-classes](https://tailwindcss.com/docs/pseudo-class-variants) within the library of generated utility classes.
 - Tailwind also provides the ability to extract small components of repeating utility class combinations when needed. While Tailwind encourages always using utility classes in your HTML, there can be scenarios where you may want to extract a component that includes multiple utility classes into a class for use in various places. Since we use React and build most of our interfaces as components, this will be unlikely, but it's a nice feature that Tailwind provides to help with maintainability if some block of HTML is not componentized. See the [Tailwind documentation](https://tailwindcss.com/docs/extracting-components) on extracting components for more information.
 
+## Drawbacks/Alternatives
+
+_more to come..._
+
 ## Forge 7.0
 
 We think that for the next version of Forge, it could embrace the utility class approach and still be the go-to package for styling front-end interfaces on DoSomething applications.
@@ -42,3 +46,17 @@ We think that for the next version of Forge, it could embrace the utility class 
 For version 7.0 we propose eliminating all the current patterns in Forge (as our projects switch to using Tailwind, they will stop using these patterns as is and thus no longer needed). Instead Forge would house the main TailwindCSS configuration and provide the generated styles from this custom configuration. Projects that use Forge 7.0 package can include these generated TailwindCSS styles and have access to all the utility classes they otherwise need.
 
 Additionally, we also propose that Forge could house generic and very common React components that we conclude are useful to use across our DoSomething properties so that there is less duplicated components on different apps.
+
+## Additional Resources
+
+### Articles
+
+- [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
+
+### Utility CSS Frameworks
+
+- [Basscss](https://basscss.com/)
+- [Beard](http://buildwithbeard.com/)
+- [TailwindCSS](https://tailwindcss.com/docs/utility-first/)
+- [Tachyons](http://tachyons.io/)
+- [Turretcss](https://turretcss.com/)
