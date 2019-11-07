@@ -61,7 +61,7 @@ The following list specifies where these alternatives fall short in comparison t
 
 - Less customizable than Tailwind.
 - Not as actively maintained.
-- Extension via NPM pacakage add-ons.
+- Extension via NPM package add-ons.
 - Minimal resources and documentation.
 
 **[Beard](http://buildwithbeard.com/)**
