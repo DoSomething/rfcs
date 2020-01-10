@@ -102,6 +102,8 @@ However, utility classes inherently avoid styling issues with the global scope a
 
 We could potentially still see the opportunity to use CSS-in-JS in scenarios where a complex design could require additional styling that utility classes could not address. Some designs where there are very specific pixel size adjustments, etc and it could actually be helpful to maintain those specific cases as custom CSS within the JS for the component. This could establish a process where any required custom CSS is only added specifically to the component where it needs to apply.
 
+We did end up doing a trial run using [Emotion](https://emotion.sh/docs/introduction) for a scenario where we needed very specific CSS styles to animate and rotate an SVG spinner. Emotion ended up working perfectly for this scenario, completely scoping the custom CSS styles to the component, working great in conjunction with some of the Tailwind utility classes used to further style the spinner component. We have decided to continue to move forward with Emotion as a suitable compliment for when a component needs very custom CSS styles.
+
 ## Forge 7.0
 
 We think that for the next version of Forge, it could embrace the utility class approach and still be the go-to package for styling front-end interfaces on DoSomething applications.
