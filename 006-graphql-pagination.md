@@ -1,6 +1,6 @@
 # GraphQL Pagination
 
-We should use [Relay Cursor Connections](https://facebook.github.io/relay/graphql/connections.htm#) to paginate results in GraphQL. 
+We should use [GraphQL Cursor Connections](https://facebook.github.io/relay/graphql/connections.htm#) to paginate results in GraphQL. 
 
 **Discussion:** https://github.com/DoSomething/rfcs/pull/6
 
@@ -22,7 +22,7 @@ This gives us no way to know whether there's another page of results without mak
 
 ## Proposal
 
-We should use [Relay Cursor Connections](https://facebook.github.io/relay/graphql/connections.htm#) to paginate results in GraphQL, and add REST API support to paginate via cursors (e.g. "get me all the results after #1015" rather than "get me the tenth page of results") to Northstar and Rogue.
+We should use [GraphQL Cursor Connections](https://facebook.github.io/relay/graphql/connections.htm#) to paginate results in GraphQL, and add REST API support to paginate via cursors (e.g. "get me all the results after #1015" rather than "get me the tenth page of results") to Northstar and Rogue.
 
 ```gql
 {
