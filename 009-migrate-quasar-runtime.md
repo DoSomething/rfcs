@@ -4,7 +4,7 @@
 
 We want to simplify our automated job's runtime by migrating from Jenkins (EC2) to a simpler alternative (Hosted).
 
-**Discussion:** Link the PR introducing this RFC here!
+**Discussion:** <https://github.com/DoSomething/rfcs/pull/9>
 
 ## Problem
 
