@@ -125,12 +125,3 @@ General observations|
 It introduces too many changes to the way we collaborate, test, and setup our jobs. Changing a single aspect of any job would require us to change code and deploy to master and production. This is too restrictive. We learned the value of Jenkins flexibility while migrating to use DBT.
 
 If we were to invest all of our resources into refactoring the whole Quasar codebase, as well as adopting a whole new paradigm to manage our jobs, I would rather invest it adopting Astronomer!
-
-
-
-
-
-
-_(Optional)_ Why should we _not_ do this? (Additional complexity, time investment, etc.)
-
-_(Optional)_ Briefly note any alternatives you considered.
