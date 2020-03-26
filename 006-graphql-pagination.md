@@ -50,6 +50,8 @@ This is certainly more verbose than using standard lists! I could see a good arg
 
 Using cursors for pagination also requires some REST API updates (to generate the cursor for each item in a paginated response and then to build the database query based on the given `?cursor` query string).
 
+Finally, cursor pagination also removes our ability to jump to specific page offsets (e.g. linking directly to the 15th page of users or posts), because each page is relative to the previous page's cursor (rather than a numerical offset). If paginated navigation is required, we'll have to take the performance hit associated with "standard" pagination.
+
 ## Alternatives
 
 There are [multiple approaches to pagination with GraphQL](https://www.apollographql.com/docs/react/data/pagination/).
