@@ -13,7 +13,7 @@ Our front-end application, Phoenix, is not as scalable, simple, or performant as
 - Because the application is almost completely rendered on the client, we see **reduced performance on slower devices** (like old phones). This may reduce engagement, since nobody likes waiting.
 - Finally, we've been limited in what we can share on social networks (whose scrapers do not execute client-side code) since any social metadata must be fetched and rendered by a separate server-side process. This also impacts built-in web functionality, like using `#anchor-links` to link directly to a section of a page.
 
-Despite these problems, we're generally happy with what we've built in Phoenix & don't want to consider a full re-write. We know that approach [often turns into a quagmire](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) and so whatever we choose, we want to be able to adopt it incrementally with our existing codebase (sorry [Nuxt.js](https://vuejs.org), [Svelte](https://svelte.dev) and [Livewire](https://laravel-livewire.com)!)
+Despite these problems, we're generally happy with what we've built in Phoenix & don't want to consider a full re-write. We know that approach [often turns into a quagmire](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) and so whatever we choose, we want to be able to adopt it incrementally with our existing codebase (sorry [Nuxt.js](https://nuxtjs.org), [Svelte](https://svelte.dev) and [Livewire](https://laravel-livewire.com)!)
 
 ## Proposal
 
