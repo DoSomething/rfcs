@@ -66,7 +66,7 @@ At first glance, we're just moving the same work from the client to the (admitte
 
 #### Static Rendering & On-Demand Rendering
 
-Next.js supports [opt-in static generation](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) alongside on-demand rendered routes. This means that pages that are completely static (say, an article page) can be rendered to HTML at build-time while other pages continue to be rendered on-demand. Unfortunately, this [doesn't work with Apollo's server-side rendering](#) & so we're stuck with a choice between static generation & pre-rendering colocated queries.
+Next.js supports [opt-in static generation](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) alongside on-demand rendered routes. This means that pages that are completely static (say, an article page) can be rendered to HTML at build-time while other pages continue to be rendered on-demand. Unfortunately, this [doesn't work with Apollo's server-side rendering](https://github.com/DoSomething/phoenix-next/pull/1970#issuecomment-623726651) & so we're stuck with a choice between static generation & pre-rendering colocated queries.
 
 #### Further Rendering Optimizations
 
