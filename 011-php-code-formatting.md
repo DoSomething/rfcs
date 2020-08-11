@@ -46,7 +46,7 @@ Additionally, some code editors (like Visual Studio Code) easily support running
 
 The [PHP Coding Standards Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) tool cares less about the "look" of the PHP Code, and more about the code quality. It focuses on automatically fixing PHP code to follow a specific set of code quality rules, and in some scenarios it can even modernize and optimize the code.
 
-It helps developers eliminate any concerns regarding the quality of their PHP code, whether they are adhering to PSR standards and helps with linting their code.
+It helps developers eliminate any concerns regarding the quality of their PHP code, whether they are adhering to [PSR](https://www.php-fig.org/psr/) standards and helps with linting their code.
 
 You can see a [pull request](https://github.com/DoSomething/rogue/pull/1092) on our Rogue application with how the PHP CS Fixer tool is configured and how it proceeded to format the code.
 
@@ -54,12 +54,41 @@ This [commit](https://github.com/DoSomething/rogue/commit/eeca6efb6b29df01e13e81
 
 This [commit](https://github.com/DoSomething/rogue/pull/1092/commits/d48ec9a1a759941c49c5e687a80b639e9d808fed) specifically shows all the files changed when the `composer format` command was executed within the Homestead vagrant environment.
 
-Since this tool is run as a composer command, based on most of our development setups, the command should be run within the Homestead vagrant box. In practice, developers can potentially run the command manually, but it is also setup to run within out Continuous Integration environment and it will flag any failures within a pull request (similar to how StyleCI behaves).
+Since this tool is run as a composer command, based on most of our development setups, the command should be run within the Homestead vagrant box. In practice, developers can potentially run the command manually, but it is also setup to run within our Continuous Integration environment and it will flag any failures within a pull request (similar to how StyleCI behaves).
 
-However, once flagged in a pull request, to automatically fix these error, developers can just run the `composer format` command in Homestead and then commit and push up their code, confident that the errors were addressed and the style checks should pass.
+However, once flagged in a pull request, to automatically fix these errors, developers can just run the `composer format` command in Homestead and then commit and push up their code, confident that the errors were addressed and the style checks should pass.
 
 ## Drawbacks
 
-// WIP...
+### Two-Worlds Problem
+
+In an ideal world, the PHP CS Fixer tool would run after Prettier and both be triggered by the pre-commit hook. However, based on our development environment setup using Homestead, we typically run `composer` commands within the vagrant virtual machine and `npm` commands outside the vagrant box (watching and compiling assets with via `npm` tool has proven to run rather slow on the VM and thus we typically run them within our local environment).
+
+Due to this setup, one drawback with the PHPCS Fixer tool is that the tool cannot be triggered as a pre-commit hook to run when Prettier is run.
+
+This [post](https://sebastiandedeyne.com/running-php-cs-fixer-on-every-commit-with-husky-and-lint-staged/) discusses setting up both Prettier and PHP CS Fixer to run using the [`lint-staged`](https://github.com/okonet/lint-staged) NPM package, which allows configuring use of code quality tools alongside Prettier. However, I think it only works because they are both running within the same environment (and not split between a VM and local computer).
+
+While it is unfortunate it is not a deal breaker and as described in the "PHP Code Standards Fixer" section above, the checks will happen via the CI runs and devs can fix errors locally by running `composer format`, commit and push them up.
+
+### Contradictions
+
+Another potential drawback is the possibility of contradicting fixes. Where depending on the order of operations, a style fix could keep getting edited back and forth between Prettier and PHP CS Fixer.
+
+This is theoretical, since I have not encountered this, but I think it will be something to look out for initially if we move forward with this RFC.
+
+Luckily, both Prettier and the PHP CS Fixer rulesets adhere to the same PSRs so I am hopeful that this will not really be an issue.
+
+For a quick visual comparison, here is the same file edited separately by the two tools:
+
+#### Prettier Changes
+
+You can see in these [Prettier file changes](https://github.com/DoSomething/rogue/pull/1094/files#diff-5c9547d315e53dd95227ca9984b56d06), it edited the line-lengths of the code.
+
+#### PHP CS Fixer Changes
+
+You can see in these [PHP CS Fixer file changes](https://github.com/DoSomething/rogue/pull/1092/files#diff-5c9547d315e53dd95227ca9984b56d06), it sorted the class imports to be alphabetical and removed the spacing around string concatenation.
 
 ## Additional Resources
+
+- [Using Prettier in PHP](https://madewithlove.com/using-prettier-in-php/)
+- [Running PHP CS Fixer on every commit with husky and lint-staged](https://sebastiandedeyne.com/running-php-cs-fixer-on-every-commit-with-husky-and-lint-staged/)
