@@ -50,7 +50,7 @@ It helps developers eliminate any concerns regarding the quality of their PHP co
 
 You can see a [pull request](https://github.com/DoSomething/rogue/pull/1092) on our Rogue application with how the PHP CS Fixer tool is configured and how it proceeded to format the code.
 
-This [commit](https://github.com/DoSomething/rogue/commit/eeca6efb6b29df01e13e816b7d051e872b8cd2f7) specifically shows how the PHP CS Fixer tool is set up. The process is simplified by utilizing the [weerd/[php-style](https://github.com/weerd/php-style) package which contains easily accessible rulesets for both generic PHP packages and Laravel projects.
+This [commit](https://github.com/DoSomething/rogue/commit/eeca6efb6b29df01e13e816b7d051e872b8cd2f7) specifically shows how the PHP CS Fixer tool is set up. The process is simplified by utilizing the [weerd/php-style](https://github.com/weerd/php-style) package which contains easily accessible rulesets for both generic PHP packages and Laravel projects.
 
 This [commit](https://github.com/DoSomething/rogue/pull/1092/commits/d48ec9a1a759941c49c5e687a80b639e9d808fed) specifically shows all the files changed when the `composer format` command was executed within the Homestead vagrant environment.
 
@@ -59,5 +59,7 @@ Since this tool is run as a composer command, based on most of our development s
 However, once flagged in a pull request, to automatically fix these error, developers can just run the `composer format` command in Homestead and then commit and push up their code, confident that the errors were addressed and the style checks should pass.
 
 ## Drawbacks
+
+// WIP...
 
 ## Additional Resources
