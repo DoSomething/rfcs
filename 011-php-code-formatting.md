@@ -86,7 +86,7 @@ You can see in these [Prettier file changes](https://github.com/DoSomething/rogu
 
 #### PHP CS Fixer Changes
 
-You can see in these [PHP CS Fixer file changes](https://github.com/DoSomething/rogue/pull/1092/files#diff-5c9547d315e53dd95227ca9984b56d06), it sorted the class imports to be alphabetical and removed the spacing around string concatenation.
+You can see in these [PHP CS Fixer file changes](https://github.com/DoSomething/rogue/pull/1092/files#diff-5c9547d315e53dd95227ca9984b56d06), it sorted the class imports to be alphabetical and removed the spacing around string concatenation. This would be an example where we would want our PHP CS Fixer ruleset to not fix string concatenation, since Prettier styles them with a space around string concatenation.
 
 ## Additional Resources
 
