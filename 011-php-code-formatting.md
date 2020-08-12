@@ -30,7 +30,7 @@ As the [Prettier docs explain](https://prettier.io/docs/en/comparison.html), Pre
 
 [Prettier PHP Plugin](https://github.com/prettier/plugin-php) is an opinionated code formatter that will rewrite outputted PHP code that conforms to a consistent style, aiming for a line length print width of 80 characters.
 
-It helps developers eliminate any concerns regarding how their PHP code looks because Prettier takes care of that for them.
+It helps developers eliminate any concerns regarding how their PHP code looks because Prettier takes care of that for them. There are [very few options](https://prettier.io/docs/en/options.html) in Prettier that can be configured, which is why it is considered "opinionated" and is also the primary strength of Prettier; it removes opportunities for developers to waste time on trivial details regarding code formatting preferences.
 
 You can see a [pull request](https://github.com/DoSomething/rogue/pull/1094) on our Rogue application with how the Prettier PHP Plugin is configured and how it proceeded to format the code.
 
