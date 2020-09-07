@@ -8,7 +8,7 @@ We should remove the custom application namespaces from the Laravel PHP projects
 
 A few of our apps utilize custom application namespaces for classes, which adds to the level of complexity and thoroughness required when performing upgrades or running commands, etc.
 
-Prior to Laravel 6.x, there was an [`app:name`](https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/Console/AppNameCommand.php) Artisan command you could run after initially setting up a project to rename the application namespace from `App\\` to something custom (e.g. we use `Auora\\` and `Rogue\\` in those respective projects).
+Prior to Laravel 6.x, there was an [`app:name`](https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/Console/AppNameCommand.php) Artisan command you could run after initially setting up a project to rename the application namespace from `App\\` to something custom (e.g. we use `Aurora\\` and `Rogue\\` in those respective projects).
 
 As of Laravel 6.x, this Artisan command was removed ([it happened in the unreleased 5.9 version](https://github.com/laravel/framework/pull/27575) that become 6.x), since it did not serve much of a purpose.
 
