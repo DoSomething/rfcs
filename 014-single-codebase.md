@@ -22,7 +22,7 @@ However, breaking our monolith into a service-oriented architecture introduced n
 
 ## Proposal
 
-We should consolidate our backend services (Northstar, Rogue, and Chompy) into **a single monolithic Laravel application.**
+We should consolidate our Laravel services (Aurora, Northstar, Rogue, and Chompy) into **a single monolithic application.**
 
 - This will **simplify architectural decisions** & enable us to iterate faster. Instead of sorting new functionality into strict bounded contexts up front, we'll be able to simply place new entities into a single backend context. Architectural decisions will be less binding, as it's easier to refactor within a single codebase than across network boundaries.
 
