@@ -1,4 +1,4 @@
-In 2021, we began to [only maintain Customer.io profiles for members who have opted in to receive email and/or SMS promotions](https://www.pivotaltracker.com/epic/show/4721712). The workflows in Customer.io campaigns are convenient because they provide a no-code way to send transactional email and/or SMS messages -- but it does require that a member has a Customer.io profile in order to receive the transactional message.
+In 2021, we began to [only maintain Customer.io profiles for active members who have opted in to receive email and/or SMS promotions](https://www.pivotaltracker.com/epic/show/4721712). The workflows in Customer.io campaigns are convenient because they provide a no-code way to send transactional email and/or SMS messages -- but it does require that a member has a Customer.io profile in order to receive the transactional message.
 
 This RFC details how we could instead use Northstar model event observers to make the relevant API requests to either send a trasnactional email message ID or SMS broadcast message ID, to avoid maintaing a Customer.io profile for a member to send them the relevant confirmation message.
 
