@@ -1,3 +1,5 @@
+In 2021, a major initiative we've undertaken has been to only maintain Customer.io profiles for members who have opted in to receive email and/or SMS promotions. The workflows in Customer.io campaigns are convenient to send transactional emails and SMS without requiring code -- but it does require that a member has a Customer.io profile in order to receive the transactional message. This RFC details how we could instead use Northstar model event observers to make the relevant API requests to either send a trasnactional email message ID or SMS broadcast message ID, to avoid maintaing a Customer.io profile for a member to send them the relevant confirmation message.
+
 ## Emails
 
 Use the App API for sending confirmation emails. This way, members who aren't subscribed for promotions will still receive transactional emails for these events:
