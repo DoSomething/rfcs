@@ -22,13 +22,15 @@ Instead of relying on Customer.io campaigns to send SMS compliance messages, mod
 
 ## Customization
 
-The generic email transaction ID's can be stored in config variables:
+The generic email message transaction ID's can be stored in config variables:
 
 * `signup_created_email_message_id`
 * `post_created_email_message_id`
 * `post_accepted_email_message_id`
 * `post_accepted_email_message_id`
 * `user_club_id_changed_email_message_id`
+
+The relevant Signup or Post observers can dispatch a new job to execute `sendEmail` request for the relevant config variable (e.g. [SendPasswordUpdatedEmail](https://github.com/DoSomething/northstar/blob/main/app/Jobs/SendPasswordUpdatedEmail.php))
 
 Add fields to the relevant Campaign and Action models to store the transactional message ID to send for various transactions.
 
