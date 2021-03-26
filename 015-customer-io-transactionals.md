@@ -12,16 +12,6 @@ Use the App API for sending confirmation emails. This way, members who aren't su
 * Post approved
 * User Club ID changed
 
-## SMS
-
-Instead of relying on Customer.io campaigns to send SMS compliance messages, modify Northstar to execute a Gambit API request.
-
-* Changed SMS Status to `active`
-* Changed SMS Status to `less` -- not sure we send this (yo'ud think not since there isn't a `POST messages?origin=subscriptionStatusLess` route
-* Did not finish their voter registration (a `voter-reg` post has been created with a non-completed status)
-
-## Customization
-
 The generic [transactional message ID's](https://customer.io/docs/transactional-api#transactional-message-template-code-databackticks1transactional_message_idcode) to use for each confirmation message can be stored in config variables:
 
 * `signup_created_email_message_id`
@@ -30,16 +20,29 @@ The generic [transactional message ID's](https://customer.io/docs/transactional-
 * `post_accepted_email_message_id`
 * `user_club_id_changed_email_message_id`
 
+### Overrides
+
 The relevant Signup or Post observers can dispatch a new job to execute `sendEmail` request for the relevant config variable (e.g. [SendPasswordUpdatedEmail](https://github.com/DoSomething/northstar/blob/main/app/Jobs/SendPasswordUpdatedEmail.php))
 
 Add fields to the relevant Campaign and Action models to store the transactional message ID to override the transactional messages for a signup or post:
 
-### Campaign
+#### Campaign
 
 * `signup_created_email_message_id` 
 
-### Action
+#### Action
 
 * `post_created_email_message_id`
 * `post_accepted_email_message_id`
 * `post_accepted_email_message_id`
+
+
+## SMS
+
+Instead of relying on Customer.io campaigns to send SMS compliance messages, modify Northstar to execute a Gambit API request.
+
+* Changed SMS Status to `active`
+* Changed SMS Status to `less` -- not sure we send this (yo'ud think not since there isn't a `POST messages?origin=subscriptionStatusLess` route
+* Did not finish their voter registration (a `voter-reg` post has been created with a non-completed status)
+
+
