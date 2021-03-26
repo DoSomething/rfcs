@@ -19,3 +19,25 @@ Instead of relying on Customer.io campaigns to send SMS compliance messages, mod
 * Changed SMS Status to `active`
 * Changed SMS Status to `less` -- not sure we send this (yo'ud think not since there isn't a `POST messages?origin=subscriptionStatusLess` route
 * Did not finish their voter registration (a `voter-reg` post has been created with a non-completed status)
+
+## Customization
+
+The generic email transaction ID's can be stored in config variables:
+
+* `signup_created_email_message_id`
+* `post_created_email_message_id`
+* `post_accepted_email_message_id`
+* `post_accepted_email_message_id`
+* `user_club_id_changed_email_message_id`
+
+Add fields to the relevant Campaign and Action models to store the transactional message ID to send for various transactions.
+
+Campaign:
+
+* `signup_created_email_message_id` 
+
+Action:
+
+* `post_created_email_message_id`
+* `post_accepted_email_message_id`
+* `post_accepted_email_message_id`
