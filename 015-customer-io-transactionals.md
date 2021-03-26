@@ -22,7 +22,7 @@ Instead of relying on Customer.io campaigns to send SMS compliance messages, mod
 
 ## Customization
 
-The generic email message transaction ID's can be stored in config variables:
+The generic [transactional message ID's](https://customer.io/docs/transactional-api#transactional-message-template-code-databackticks1transactional_message_idcode) to use for each confirmation message can be stored in config variables:
 
 * `signup_created_email_message_id`
 * `post_created_email_message_id`
