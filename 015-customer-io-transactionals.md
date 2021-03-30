@@ -4,21 +4,21 @@ This RFC details how we could instead use Northstar model event observers to mak
 
 ## Emails
 
-We should use the App API to send confirmation emails. so members who aren't subscribed to promotions will still receive transactional emails for these events:
+We should use the App API to send confirmation emails, so members who aren't subscribed to promotions will still receive transactional emails for these events:
 
-| Event | Job name | Config variable |
+| Event | New job | New config variable |
 |-------|----------|-----------------|
 | Signup created | `SendSignupCreatedEmail` | `signup_created_email_message_id` |
 | Post created | `SendPostCreatedEmail` | `post_created_email_message_id` | 
 | Post approved | `SendPostApprovedEmail` | `post_approved_email_message_id` | 
 | Post rejected | `SendPostRejectedEmail` | `post_rejected_email_message_id` | 
-| User Club ID changed | `SendUserClubChangedEmail` | `user_club_changed_message_id`
+| User Club ID changed | `SendUserClubChangedEmail` | `user_club_changed_email_message_id`
 
 The config variables will store [transactional message ID's](https://customer.io/docs/transactional-api#transactional-message-template-code-databackticks1transactional_message_idcode) to use for each confirmation message can be stored in config variables:
 
+
 ### Overrides
 
-The relevant Signup or Post observers can dispatch a new job to execute `sendEmail` request for the relevant config variable (e.g. [SendPasswordUpdatedEmail](https://github.com/DoSomething/northstar/blob/main/app/Jobs/SendPasswordUpdatedEmail.php))
 
 Add fields to the relevant Campaign and Action models to store the transactional message ID to override the transactional messages for a signup or post:
 
@@ -35,7 +35,7 @@ Add fields to the relevant Campaign and Action models to store the transactional
 
 ## SMS
 
-Instead of relying on Customer.io campaigns to send SMS compliance messages, modify Northstar to execute a Gambit API request.
+Instead of relying on Customer.io campaigns to send SMS compliance messages, modify Northstar to execute a Gambit API request. We can store config variables with the suffix `sms_message_id` to track the broadcast message ID's to send for each event, if we don't want to hardcode them. For SMS compliance messages -- we've always gone with hardcoding this message text in case its Contentful entry could accidentally be deleted.
 
 * Changed SMS Status to `active`
 * Changed SMS Status to `less` -- not sure we send this (yo'ud think not since there isn't a `POST messages?origin=subscriptionStatusLess` route
