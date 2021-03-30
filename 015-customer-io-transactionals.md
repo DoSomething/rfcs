@@ -4,21 +4,17 @@ This RFC details how we could instead use Northstar model event observers to mak
 
 ## Emails
 
-Use the App API for sending confirmation emails. This way, members who aren't subscribed for promotions will still receive transactional emails for these events:
+We should use the App API to send confirmation emails. so members who aren't subscribed to promotions will still receive transactional emails for these events:
 
-* Signup created
-* Post created
-* Post accepted
-* Post approved
-* User Club ID changed
+| Event | Job name | Config variable |
+|-------|----------|-----------------|
+| Signup created | `SendSignupCreatedEmail` | `signup_created_email_message_id` |
+| Post created | `SendPostCreatedEmail` | `post_created_email_message_id` | 
+| Post approved | `SendPostApprovedEmail` | `post_approved_email_message_id` | 
+| Post rejected | `SendPostRejectedEmail` | `post_rejected_email_message_id` | 
+| User Club ID changed | `SendUserClubChangedEmail` | `user_club_changed_message_id`
 
-The generic [transactional message ID's](https://customer.io/docs/transactional-api#transactional-message-template-code-databackticks1transactional_message_idcode) to use for each confirmation message can be stored in config variables:
-
-* `signup_created_email_message_id`
-* `post_created_email_message_id`
-* `post_accepted_email_message_id`
-* `post_accepted_email_message_id`
-* `user_club_id_changed_email_message_id`
+The config variables will store [transactional message ID's](https://customer.io/docs/transactional-api#transactional-message-template-code-databackticks1transactional_message_idcode) to use for each confirmation message can be stored in config variables:
 
 ### Overrides
 
@@ -34,7 +30,7 @@ Add fields to the relevant Campaign and Action models to store the transactional
 
 * `post_created_email_message_id`
 * `post_accepted_email_message_id`
-* `post_accepted_email_message_id`
+* `post_rejected_email_message_id`
 
 
 ## SMS
