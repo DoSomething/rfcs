@@ -41,4 +41,6 @@ Instead of relying on Customer.io campaigns to send SMS compliance messages, mod
 * Changed SMS Status to `less` -- not sure we send this (yo'ud think not since there isn't a `POST messages?origin=subscriptionStatusLess` route
 * Did not finish their voter registration (a `voter-reg` post has been created with a non-completed status)
 
+## Notes
 
+* We'd still want to track events for campaign signups and reportbacks (e.g. `campaign_signup`, `campaign_signup_post`) in order to create Customer.io segements based on members' past campaign activity.
