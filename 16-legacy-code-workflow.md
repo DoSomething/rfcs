@@ -1,13 +1,5 @@
 # Legacy Code Workflow
 
-```
-Howdy team! I was chatting with Dave about how to better handle how we refactor and sometimes replace old components/encompassed-logic in our repositories. A good example is what I’m currently working on, with some major changes to the EmailSubscriptions component that we see in the user profile. There’s lots of new functionality and visual changes so it made sense to me to create a new component, pull what I needed from old and add new code. This also allowed me to work on it and now break the existing component that is deployed. However it could be confusing if not everyone is aware it’s being changed out and when to start using the new one.
-
-A suggestion I had was to first rename the existing component and prefix it with Legacy.... Not only would this highlight to other devs that it’s a component on the way out and consider using the new one if it’s available, but it would also help the dev working on the changes to scour the codebase and find all iterations of the old component to then rename. It would provide a better overall view of everything that’s going to be effected, etc.
-3:32
-I initially just named the component something different NewsletterSubscriptions so it would not conflict, but I feel the above approach would be better and also immediately highlight the transition happening in the codebase to the rest of the team. So if you see LegacyEmailSubscriptions, that means it’s something on the verge of deprecation (or should be deprecated) and instead look for EmailSubscriptions which would be the new component!
-```
-
 We should establish a transition workflow for how we refactor and swap out legacy code components or encompassed-logic.
 
 **Discussion:** <https://github.com/DoSomething/rfcs/pull/16>
