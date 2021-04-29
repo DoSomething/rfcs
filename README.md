@@ -19,7 +19,7 @@ use a very streamlined version to discuss architectural & process changes within
 1. Create a new branch on this repo and copy `000-template.md` to `000-my-proposal.md` and fill out the template.
 2. Create a pull request. GitHub will automatically post a notification in [#announce-tech](https://app.slack.com/client/T024GV2BW/C782XBKDM) so others can review it. 
 3. Rename your proposal based on the PR's number (e.g. for [#1](https://github.com/DoSomething/rfcs/pull/1), we'd name the file `001-rfcs.md`).
-4. Once we've reached consensus (loosely defined as four approvals), merge in your RFC!
+4. Once we've reached consensus (loosely defined as two approvals), merge in your RFC!
 
 <br/><br/>
 <p align="center">
