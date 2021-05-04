@@ -1,0 +1,56 @@
+# Inertia JS
+
+We should implement the use of [Inertia JS](https://inertiajs.com/) to simplify the development of our frontend user interfaces for our administrative backend.
+
+## Problem
+
+We are in the process of consolidating and merging multiple backend services into a single codebase. Each of these services had their own frontend administrative interfaces, and we will need to unify them as well.
+
+As a team, we have found that moving to a component-based architecture for the frontend using [React](https://reactjs.org/docs/getting-started.html) and [Tailwind](https://tailwindcss.com/docs) has helped us re-use code more efficiently and made it easier to maintain existing features and develop new ones.
+
+However, to implement a component-based architecture for the administrative frontend of our consolidated backend would require a lot of work to expose numerous new API endpoints and connections that React could hook into, just to enable the administrative interface.
+
+It would be ideal if we could maintain the backend code and have it communicate easily with the frontend without having to add a lot of confusing duplicate code or connectors and endpoints that would then need to be maintained.
+
+This is where Inertia JS would excel at providing the ideal solution; it would allow us to enable a fully client-side rendered frontend and provides the glue to connect it to our existing server-side Laravel PHP code.
+
+The updates to connect the pieces are minimal and gets the team up and running to develop our administrative frontend utilizing React components and Tailwind.
+
+## Proposal
+
+Implement the use of [Inertia JS](https://inertiajs.com/) in Northstar for our administrative interface.
+
+The overall aim is to reduce maintenance for our team, particularly when adding or updating new features to our administrative interfaces.
+
+Inertia will allow us to use the best of both worlds; a client-side rendered interface with reusable React components and server-side business logic utilizing the robust and familiar Laravel framework without worrying about additional code to pass data to the React components.
+
+There will be an initial ramp up to build out the core components for our administrative interfaces. However, we can build on the experience we have obtained from component-izing our user facing frontend. We also already have some components from our activity service that have been built using React, and we could easily update those to receive data props from Inertia. Once we have an established baseline of admin components most of the admin pages will be easier to build out and/or update.
+
+The following is a proposed approach for implementing Inertia JS in Northstar:
+
+- Add Inertia JS to Northstar and set it up so it works with our existing code.
+- Implement a new main layout for the admin interface.
+- Consolidate all routes into Inertia routes that will pass data as props.
+- Build out the interface using React components that utilize the data passed via the Inertia routes.
+
+## Drawbacks
+
+For the most part there do not appear to be any significant drawbacks with implementing Inertia JS. It seems like the right "happy middleground" that would let us maintain most of our existing Laravel backend work, yet provide the flexibility to use component-based interface elements built in React.
+
+One potential drawback is that the team would be required to update and create admin interface elements; especially given how specialized some of our needs can be at times. However, I imagine that after building a number of initial admin interface elements in React as components, the level of effort would drop as components can be re-used.
+
+Another potential drawback is that Inertia just has not been around for that long. The [Inertia adaptor for Laravel](https://github.com/inertiajs/inertia-laravel) is currently tagged at version `v0.4.1` and the [Inertia adaptor for React](https://github.com/inertiajs/inertia/blob/master/packages/inertia-react/package.json) is currently at version `v0.5.12`.
+
+That being said, it has had a lot of support within the Laravel community and a lot of recent commit activity. The documentation is very thorough and it even has an entire [live example demo site](https://inertiajs.com/demo-application) built using Laravel, InertiaJS and VueJS with the code available as an [open source repository](https://github.com/inertiajs/pingcrm). The community has even contributed versions of the demo site using other server-side and client-side languages/frameworks, including one using [Laravel, InertiaJS and ReactJS](https://github.com/Landish/pingcrm-react).
+
+## Alternatives
+
+There are a couple of alternatives we also considered, but with either one it would potentially mean either less flexibility, or lots of overhead and more maintenance to enable our existing backend code to communicate with the frontend.
+
+### Laravel Nova
+
+// @todo
+
+### React Admin
+
+// @todo
