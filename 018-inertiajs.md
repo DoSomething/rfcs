@@ -1,6 +1,6 @@
 # Inertia JS
 
-We should implement the use of [Inertia JS](https://inertiajs.com/) to simplify the development of our frontend user interfaces for our administrative backend.
+We should implement the use of [Inertia JS](https://inertiajs.com/) to simplify the development of the frontend user interfaces for our administrative backend.
 
 ## Problem
 
@@ -8,7 +8,7 @@ We are in the process of consolidating and merging multiple backend services int
 
 As a team, we have found that moving to a component-based architecture for the frontend using [React](https://reactjs.org/docs/getting-started.html) and [Tailwind](https://tailwindcss.com/docs) has helped us re-use code more efficiently and made it easier to maintain existing features and develop new ones.
 
-However, to implement a component-based architecture for the administrative frontend of our consolidated backend would require a lot of work to expose numerous new API endpoints and connections that React could hook into, just to enable the administrative interface.
+However, to implement a component-based architecture for the administrative frontend of our consolidated backend would require a lot of work to expose numerous new API endpoints and connections that a component-based architecture using React would hook into, just to enable the administrative interface.
 
 It would be ideal if we could maintain the backend code and have it communicate easily with the frontend without having to add a lot of confusing duplicate code or connectors and endpoints that would then need to be maintained.
 
@@ -65,7 +65,7 @@ Nova does offer CLI generators to create custom tools within the framework that 
 
 The framework looks like is has a number of useful components to help build out an administrative interface. The main benefit React Admin provides is that the team would not have to do much work building out components for an administrative interface.
 
-However, the framework is dependent on having established API endpoints for all the resources it will represent. This would require the team to invest time and effort into building out endpoints for all backend resources and maintaining them over time.
+However, the framework is dependent on having established API endpoints for all the resources it will render. This would require the team to invest time and effort into building out endpoints for all backend resources and maintaining them over time.
 
 It would be ideal that any API endpoints the team has to maintain for our backend service are only those that other services rely on, and not for the sole purpose of presenting a client-side admin interface.
 
@@ -75,3 +75,7 @@ It would be ideal that any API endpoints the team has to maintain for our backen
 One possibility that was also considered is the implementation of Inertia JS as the adaptor for our backend and connecting it to React Admin for the pre-built React admin components. 
 
 While this sounds useful, the React Admin framework, as mentioned, relies heavily on API endpoints for resources and would not combine well with the approach Inertia JS utilizes to pass data with its built-in connectors.
+
+That being said, there could be other React admin libraries that could supply more basic components and alleviate the need to build our own.
+
+I think it would benefit the team to potentially build custom components that could be shared with both the Inertia adapted Laravel backend and the member facing frontend, but it is something the team could discuss further and not dependent on the core of this RFC to decide on implementing the use of Inertia.
