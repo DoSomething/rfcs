@@ -49,7 +49,15 @@ There are a couple of alternatives we also considered, but with either one it wo
 
 ### Laravel Nova
 
-// @todo
+[Laravel Nova](https://nova.laravel.com/) is a one-time purchase that essentially provides a full administrative panel for a Laravel application.
+
+It has a whole slew of features that are very compelling. The main benefit Nova provides is that the team would not have to do much work building out an administrative panel.
+
+However, I am cautious that how our Eloquent models have evolved and the different relationships we have established between resources, combined with the merging of services may not completely follow the Laravel approach and we could run into numerous headaches.
+
+I also imagine we would have to wait until we complete the unified database and switch off MongoDB completely before we could move to use Nova, to avoid issues since the MongoDB Eloquent driver is a community contribution and not officially supported by Laravel.
+
+Nova does offer CLI generators to create custom tools within the framework that could support our business needs. The downside is that these tools are generated as Vue components, which would require our developers to learn [Vue JS](https://vuejs.org/) and context switch between Vue JS for administrative tools and React JS for member facing tools. While the need for custom tools may be low, it would imply additional maintenance overhead in a client-side framework the team is not familiar with.
 
 ### React Admin
 
