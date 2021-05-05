@@ -61,4 +61,17 @@ Nova does offer CLI generators to create custom tools within the framework that 
 
 ### React Admin
 
-// @todo
+[React Admin](https://marmelab.com/react-admin) is an open-source framework for building admin applications in React with data provided by REST/GraphQL APIs.
+
+The framework looks like is has a number of useful components to help build out an administrative interface. The main benefit React Admin provides is that the team would not have to do much work building out components for an administrative interface.
+
+However, the framework is dependent on having established API endpoints for all the resources it will represent. This would require the team to invest time and effort into building out endpoints for all backend resources and maintaining them over time.
+
+It would be ideal that any API endpoints the team has to maintain for our backend service are only those that other services rely on, and not for the sole purpose of presenting a client-side admin interface.
+
+
+### Combo
+
+One possibility that was also considered is the implementation of Inertia JS as the adaptor for our backend and connecting it to React Admin for the pre-built React admin components. 
+
+While this sounds useful, the React Admin framework, as mentioned, relies heavily on API endpoints for resources and would not combine well with the approach Inertia JS utilizes to pass data with its built-in connectors.
