@@ -43,6 +43,14 @@ Another potential drawback is that Inertia just has not been around for that lon
 
 That being said, it has had a lot of support within the Laravel community and a lot of recent commit activity. The documentation is very thorough and it even has an entire [live example demo site](https://inertiajs.com/demo-application) built using Laravel, InertiaJS and VueJS with the code available as an [open source repository](https://github.com/inertiajs/pingcrm). The community has even contributed versions of the demo site using other server-side and client-side languages/frameworks, including one using [Laravel, InertiaJS and ReactJS](https://github.com/Landish/pingcrm-react).
 
+There is even a [showcase website](https://builtwithinertia.com/) for sites officially built using Inertia JS, and that submit themselves to be in the showcase. I did also find a post on Reddit that poses a question regarding who is using Inertia JS, and the [author of the package responds](https://www.reddit.com/r/laravel/comments/f2ydv0/is_there_anyone_here_use_inertiajs_and_what_is/fhg3557/?utm_source=reddit&utm_medium=web2x&context=3) to provide some additional input.
+
+In his response he also mentions the following:
+
+> Finally, at the end of the day Inertia is actually a pretty thin layer between your app's back-end and front-end. If you ever decided that Inertia wasn't working for you, removing it would be a relatively trivial task.
+
+I thought this was insightful and knowing that if one day we changed our minds, removing Inertia JS from our code would not necessarily be a heavy lift (most of the work would be in finding/building a different solution to connect our data to the React frontend).
+
 ## Alternatives
 
 There are a couple of alternatives we also considered, but with either one it would potentially mean either less flexibility, or lots of overhead and more maintenance to enable our existing backend code to communicate with the frontend.
