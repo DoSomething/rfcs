@@ -86,6 +86,4 @@ While this sounds useful, the React Admin framework, as mentioned, relies heavil
 
 That being said, there could be other React admin libraries that could supply more basic components and alleviate the need to build our own.
 
-I think it would benefit the team to potentially build custom components that could be shared with both the Inertia adapted Laravel backend and the member facing frontend UI, but all the endpoints is something the team could discuss further and not dependent on the core of this RFC t
-
-o decide on implementing the use of Inertia.
+I think it would benefit the team to potentially build custom components that could be shared with both the Inertia adapted Laravel backend and the member facing frontend UI, but all the endpoints is something the team could discuss further and not dependent on the core of this RFC to decide on implementing the use of Inertia.
