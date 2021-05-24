@@ -63,11 +63,19 @@ Nova does offer CLI generators to create custom tools within the framework that 
 
 [React Admin](https://marmelab.com/react-admin) is an open-source framework for building admin applications in React with data provided by REST/GraphQL APIs.
 
-The framework looks like is has a number of useful components to help build out an administrative interface. The main benefit React Admin provides is that the team would not have to do much work building out components for an administrative interface.
+The framework looks like it has a number of useful components to help build out an administrative interface. The main benefit React Admin provides is that the team would not have to do much work building out components for an administrative interface.
 
-However, the framework is dependent on having established API endpoints for all the resources it will render. This would require the team to invest time and effort into building out endpoints for all backend resources and maintaining them over time.
+However, the framework is dependent on having established API endpoints for all the resources it will render. This would require the team to invest time and effort into building out endpoints for all backend resources that would be administered via a frontend UI and maintaining all the endpoints over time.
+
+Requiring API endpoints for all resources available to both the admin frontend and external dependent services would mean that there will be many endpoints that overlap and service both, along with a number of endpoints that are only used by one or the other. This could become a maintenance headache in knowing which endpoints are used where.
+
+Endpoints that do overlap usage on both the admin frontend and external service could also become a maintenance headache in needing to setup and utilize feature-flags or version control the endpoints when changes are made. The team would likely need to be less nimble and slower with changes to API endpoints, careful that a change made for the admin frontend API response does not break functionality with how external services utilize the same response.
+
+This is not to say that versioning API responses is a bad approach, but when the API endpoint is being used for both an internal admin frontend interface and an external service frontend it could complicate things pretty quickly, balancing between versioned endpoints. Given the size of our current team, less complexity would be ideal!
 
 It would be ideal that any API endpoints the team has to maintain for our backend service are only those that other services rely on, and not for the sole purpose of presenting a client-side admin interface.
+
+One of the benefits of React Admin is that it comes with a slew of pre-built components. There is no reason we could not use a simpler package that provides just pre-built components without the included architecturea and routing control that React Admin requires. This idea opens the possibility of utilizing a "combo" approach, described below.
 
 
 ### Combo
@@ -78,4 +86,6 @@ While this sounds useful, the React Admin framework, as mentioned, relies heavil
 
 That being said, there could be other React admin libraries that could supply more basic components and alleviate the need to build our own.
 
-I think it would benefit the team to potentially build custom components that could be shared with both the Inertia adapted Laravel backend and the member facing frontend, but it is something the team could discuss further and not dependent on the core of this RFC to decide on implementing the use of Inertia.
+I think it would benefit the team to potentially build custom components that could be shared with both the Inertia adapted Laravel backend and the member facing frontend UI, but all the endpoints is something the team could discuss further and not dependent on the core of this RFC t
+
+o decide on implementing the use of Inertia.
